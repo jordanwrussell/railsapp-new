@@ -193,6 +193,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (~> 2.7, >= 2.7.11)
+  aws-sdk-resources (~> 2.7, >= 2.7.11)
   bcrypt
   bootstrap-sass
   byebug
@@ -217,4 +218,4 @@ RUBY VERSION
    ruby 2.2.6p396
 
 BUNDLED WITH
-   1.13.7
+   1.14.4
