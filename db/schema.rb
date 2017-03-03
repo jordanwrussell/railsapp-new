@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222053410) do
+ActiveRecord::Schema.define(version: 20170303054122) do
 
   create_table "pins", force: :cascade do |t|
     t.string   "description"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20170222053410) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.index ["user_id"], name: "index_pins_on_user_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.text     "tag"
+    t.integer  "pin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pin_id"], name: "index_tags_on_pin_id"
   end
 
   create_table "users", force: :cascade do |t|

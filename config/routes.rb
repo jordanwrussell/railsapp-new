@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :pins
   devise_for :users
-  get 'pages/home'
+  resources :pins
+  resources :users
+
   root 'pins#index'
-
-  get 'users' => 'users#index'
-  get 'users/:id' => 'users#show'
-
+  
+  get 'pages/home'
+ 
   get 'about' => 'pages#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
